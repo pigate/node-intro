@@ -1,0 +1,8 @@
+//export an anonymous object
+var Buz = function(){};
+
+Buz.prototype.log = function(){
+  console.log('buz!');
+};
+
+module.exports = new Buz();

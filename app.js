@@ -10,6 +10,5 @@ console.log = function(d){
   log_stdout.write(util.format(d) + '\n');
 }
 
-var greetings = require('./greetings.js');
-console.log(greetings.sayHelloInEnglish()); 
-
+var buzz = require('./buzz.js');
+buzz.log();
