@@ -13,3 +13,6 @@ console.log = function(d){
 
 foo();
 bar(); //bar gets the anonymous function from exporting
+
+var fizz = require('./fizz.js').fizz; 
+fizz();
