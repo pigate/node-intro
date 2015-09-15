@@ -1,11 +1,16 @@
 //exports is the same thing as module.exports
 //var exports = module.exports = {}
 
-module.exports = {
-  sayHelloInEnglish: function(){
+var _module = function(){
+  var sayHelloInEnglish = function(){
     return "Hello";
-  },
-  sayHelloInSpanish: function(){
+  }
+  var sayHelloInSpanish = function(){
     return "Hola";
   }
-};
+}
+_module.prototype.log = function(){
+    console.log("greetings!");
+}
+
+module.exports = new _module();

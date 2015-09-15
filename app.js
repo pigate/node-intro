@@ -10,5 +10,9 @@ console.log = function(d){
   log_stdout.write(util.format(d) + '\n');
 }
 
-var buzz = require('./buzz.js');
-buzz.log();
+var redis = require('redis');
+var client = redis.createClient();
+
+client.on('connect', function() {
+    console.log('connected');
+});
